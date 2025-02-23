@@ -12,7 +12,10 @@ async function handleGenerateNewShortURL(req, res) {
         visitHistory: [],
     });
 
-    res.json({ id: shortID });
+    return res.render('home', {
+        id: shortID
+    })
+    // res.json({ id: shortID });
 }
 
 async function handleGetAnalytics(req, res) {
